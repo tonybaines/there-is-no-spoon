@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+REVEAL_VER="3.9.2"
+
 if [[ ! -d reveal.js ]]; then
   echo "Downloading reveal.js"
-  wget -c https://github.com/hakimel/reveal.js/archive/3.8.0.tar.gz  -O - | tar xz
-  mv reveal.js-3.8.0/ reveal.js/
+  wget -c https://github.com/hakimel/reveal.js/archive/${REVEAL_VER}.tar.gz  -O - | tar xz
+  mv reveal.js-${REVEAL_VER}/ reveal.js/
 else
   echo "reveal.js is already downloaded, nothing to do"
 fi

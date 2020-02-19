@@ -1,33 +1,39 @@
 = There is no spoon
 2020-03-13
-:revnumber: {project-version}
-ifndef::imagesdir[:imagesdir: images
-ifndef::sourcedir[:sourcedir: src
+Tony Baines
 :source-highlighter: highlightjs
 :icons: font
-:revealjs_theme: sky
+:revealjs_theme: night
 :revealjs_slideNumber: h.v
 
-== Time does not exist
-== The network isn't reliable
-** Delivery
-
-== Machines aren't reliable
-** Consistency/Consensus
-** Transactions
 
 == Computers can't count
-** Overflow
-** Precision
+* Overflow
+* Precision
+
+== Time does not exist
+* Non-network time
+* Not monotonic
+* VM pauses
+* Leap years/seconds
+* DST
+* Zones
+
+== The network isn't reliable
+* Delivery
+
+== Machines aren't reliable
+* Consistency/Consensus
+* Transactions
 
 == You can't trust the logs
-** Copy-and-paste error handling
-** Bad assumptions (wrong reason logged)
+* Copy-and-paste error handling
+* Bad assumptions (wrong reason logged)
 
 == You can't trust upstream
-** Bad data
-** DoS
+* Bad data
+* DoS
 
 == You can't trust downstream
-** Slow responses
-** Bad data
+* Slow responses
+* Bad data
