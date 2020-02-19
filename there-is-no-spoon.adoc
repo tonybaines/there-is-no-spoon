@@ -1,0 +1,33 @@
+= There is no spoon
+2020-03-13
+:revnumber: {project-version}
+ifndef::imagesdir[:imagesdir: images
+ifndef::sourcedir[:sourcedir: src
+:source-highlighter: highlightjs
+:icons: font
+:revealjs_theme: sky
+:revealjs_slideNumber: h.v
+
+== Time does not exist
+== The network isn't reliable
+** Delivery
+
+== Machines aren't reliable
+** Consistency/Consensus
+** Transactions
+
+== Computers can't count
+** Overflow
+** Precision
+
+== You can't trust the logs
+** Copy-and-paste error handling
+** Bad assumptions (wrong reason logged)
+
+== You can't trust upstream
+** Bad data
+** DoS
+
+== You can't trust downstream
+** Slow responses
+** Bad data
