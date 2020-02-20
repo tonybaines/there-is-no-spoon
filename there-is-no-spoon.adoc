@@ -1,6 +1,7 @@
-= There is no spoon
+= There Is No Spoon
 2020-03-13
 Tony Baines
+:docinfo: shared
 :source-highlighter: highlightjs
 :icons: font
 :revealjs_theme: night

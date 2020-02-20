@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+while inotifywait -e modify *.adoc; do ./build ; done
+
