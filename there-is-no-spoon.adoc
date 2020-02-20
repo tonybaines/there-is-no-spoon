@@ -6,7 +6,8 @@ Tony Baines
 :icons: font
 :revealjs_theme: night
 :revealjs_slideNumber: h.v
-
+:revealjs_hash: true
+:revealjs_history: true
 
 == Computers can't count
 * Overflow
@@ -21,7 +22,9 @@ Tony Baines
 * Zones
 
 == The network isn't reliable
-* Delivery
+* Connectivity
+** Partial protocol negotiation
+* Timeliness
 
 == Machines aren't reliable
 * Consistency/Consensus

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
+python3 -m http.server 8000 > /dev/null 2>&1 &
+trap 'jobs -p | xargs kill' EXIT # destroy the background task on exit
+
 while inotifywait -e modify *.adoc; do ./build ; done
 
