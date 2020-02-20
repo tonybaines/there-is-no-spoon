@@ -25,4 +25,15 @@ Also starts an HTTP server to serve the generated content (http://localhost:8000
 NOTE: Uses `inotifywatch` and `python3` which may need to be installed.
 
 == `./package`
-ZIPs up the HTML + dependencies into a sharable archive
+ZIPs up the HTML + dependencies into a sharable archive.
+
+== PDF Document
+
+Open the HTML *in Chrome/Chomium* with `?print-pdf` appended to the URL, then use
+the 'Print' dialog.
+
+* http://localhost:8000/there-is-no-spoon.html?print-pdf#/
+* file:///home/tony/ws/PERSONAL/presentations/there-is-no-spoon/there-is-no-spoon.html?print-pdf#/
+
+NOTE: If you want to include speaker notes in your export, you can append
+`showNotes=true` to the query string.

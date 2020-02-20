@@ -8,6 +8,8 @@ Tony Baines
 :revealjs_slideNumber: h.v
 :revealjs_hash: true
 :revealjs_history: true
+:revealjs_plugin_pdf: enabled
+:showNotes: "separate-page"
 
 == Computers can't count
 * Overflow
