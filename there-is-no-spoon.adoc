@@ -4,7 +4,7 @@ Tony Baines
 :docinfo: shared
 :source-highlighter: highlightjs
 :icons: font
-:revealjs_theme: night
+:revealjs_theme: solarized
 :revealjs_slideNumber: h.v
 :revealjs_hash: true
 :revealjs_history: true
@@ -12,34 +12,82 @@ Tony Baines
 :showNotes: "separate-page"
 
 == Computers can't count
-* Overflow
-* Precision
+* They can't do addition / subtraction
+* They can't do multiplication / division
+
+=== Overflow
+[source,java]
+----
+int i = 2147483647;
+println(i + 1); //-2147483648 (overflow)
+
+int i = -2147483648;
+println(i - 1); // 2147483647 (underflow)
+----
+
+=== Precision
+* IEEE 754 standard for floating point
+
+[source,java]
+----
+// JShell REPL
+1/3 = 0 // Integer
+1/3.0 = 0.3333333333333333 // Double
+1/3.0f = 0.33333334 // Float
+
+(1/3.0f) * 3 = 1.0
+(1/3.0f) * 3.0f = 1.0 // Float * Float
+(1/3.0f) * 3.0 = 1.0000000298023224 // Float * Double
+----
+
 
 == Time does not exist
-* Non-network time
-* Not monotonic
-* VM pauses
-* Leap years/seconds
-* DST
-* Zones
+* Scheduled and repeating tasks
+* Keys with a time component
+
+=== Non-network time
+* The clocks on your servers may not agree
+* Use NTP
+
+=== Not monotonic
+* NTP can 'jump' backwards and forwards to correct system time
+
+=== VM pauses
+* If your system runs on virtualised hardware
+* If your application runs in a GC'd runtime
+* Time can jump forwards in a hurry
+
+=== DST
+* On (CHECK DATE) it was 1:00am twice
+
+=== Zones
+* If your server is configured to use local time ...
 
 == The network isn't reliable
-* Connectivity
-** Partial protocol negotiation
-* Timeliness
+
+=== Connectivity
+* Partial protocol negotiation
+* The client can crash at *any* time
+
+=== Timeliness
+* The 99th percentile delay can be *huge*
 
 == Machines aren't reliable
-* Consistency/Consensus
-* Transactions
+
+=== Consistency/Consensus
+* Split brain
+*
+
+=== Transactions
 
 == You can't trust the logs
-* Copy-and-paste error handling
-* Bad assumptions (wrong reason logged)
+=== Copy-and-paste error handling
+=== Bad assumptions (wrong reason logged)
 
 == You can't trust upstream
-* Bad data
-* DoS
+=== Bad data
+=== DoS
 
 == You can't trust downstream
-* Slow responses
-* Bad data
+=== Slow responses
+=== Bad data
