@@ -72,22 +72,44 @@ println(i - 1); // 2147483647 (underflow)
 === Timeliness
 * The 99th percentile delay can be *huge*
 
-== Machines aren't reliable
+
+== The Data is Wrong
 
 === Consistency/Consensus
 * Split brain
-*
+* Which write wins?
 
 === Transactions
+* System A needs to write to System B and C
+** System B write succeeds, System C write fails
+** What next?
+
 
 == You can't trust the logs
+
 === Copy-and-paste error handling
+
 === Bad assumptions (wrong reason logged)
+* (Example from BLIS here)
 
 == You can't trust upstream
+
 === Bad data
+* Unexpected
+* Invalid
+* Malicious
+
 === DoS
+* Failures re-tried in a tight loop
+* High load passed on
+* Inefficient / not caching the cacheable
 
 == You can't trust downstream
+
 === Slow responses
+* Consume your application resources
+* Timeout / retry make make it worse (DoS)
+
 === Bad data
+* API changes
+* Schema mis-match
